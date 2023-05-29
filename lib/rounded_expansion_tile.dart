@@ -155,7 +155,10 @@ class _RoundedExpansionTileState extends State<RoundedExpansionTile>
             trailing: _noTrailing! ? null : _trailingIcon(),
             visualDensity: widget.visualDensity,
             bool isExpanded: () {
-              widget.isExpanded(_expanded).call();
+              if(_expanded == true) {
+                 widget.isExpanded(_expanded).call(); 
+              } else {
+                 widget.isExpanded(false).call();
             },
             onTap: () {
               if (widget.onTap != null) {
