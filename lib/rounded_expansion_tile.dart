@@ -157,7 +157,7 @@ class _RoundedExpansionTileState extends State<RoundedExpansionTile>
                 ///
                 /// When a developer defines an extra option on tap, this will be executed. If not provided this step will be skipped.
                 /// ignore: unnecessary_statements
-                widget.onTap;
+                widget.onTap?.call();
               }
               setState(() {
                 // Checks if the ListTile is expanded and sets state accordingly.
