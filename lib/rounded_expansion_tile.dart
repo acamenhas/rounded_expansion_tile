@@ -153,7 +153,7 @@ class _RoundedExpansionTileState extends State<RoundedExpansionTile>
             tileColor: widget.tileColor,
             trailing: _noTrailing! ? null : _trailingIcon(),
             visualDensity: widget.visualDensity,
-            isExpanded: () {
+            bool isExpanded: () {
               return _expanded;
             },
             onTap: () {
