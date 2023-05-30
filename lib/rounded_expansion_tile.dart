@@ -11,7 +11,7 @@ class RoundedExpansionTile extends StatefulWidget {
   final double? horizontalTitleGap;
   final Color? hoverColor;
   final bool? isThreeLine;
-  final bool Function()? isExpanded;
+  final void Function()? isExpanded;
   final Key? key;
   final Widget? leading;
   final double? minLeadingWidth;
@@ -155,11 +155,12 @@ class _RoundedExpansionTileState extends State<RoundedExpansionTile>
             trailing: _noTrailing! ? null : _trailingIcon(),
             visualDensity: widget.visualDensity,
             isExpanded: () {
-              if(_expanded == true) {
+              /*if(_expanded == true) {
                  widget.isExpanded(_expanded).call(); 
               } else {
                  widget.isExpanded(false).call();
-              }
+              }*/
+              print(">" + _expanded.toString());
             },
             onTap: () {
               if (widget.onTap != null) {
