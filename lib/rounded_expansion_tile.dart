@@ -160,7 +160,8 @@ class _RoundedExpansionTileState extends State<RoundedExpansionTile>
               } else {
                  widget.isExpanded(false).call();
               }*/
-              print(">" + _expanded.toString());
+              //print(">" + _expanded.toString());
+              print("isExpanded");
             },
             onTap: () {
               if (widget.onTap != null) {
